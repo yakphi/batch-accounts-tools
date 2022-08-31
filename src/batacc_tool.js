@@ -118,6 +118,24 @@ const fundAll = async () => {
     }
 }
 
+const jsonsToCsv = async () => {
+    const outputFileName = './data/wallets.csv';
+    const fileNames = ['./data/wallets.json'];
+
+    for (let i = 0; i < fileNames.length; i++) {
+        const fileName = fileNames[i];
+        console.log('Processing ' + fileName);
+        const file = fs.readFileSync(fileName);
+        const addresses = JSON.parse(file);
+
+        for (let j = 0; j < addresses.length; j++) {
+            const keyPair = addresses[j];
+            fs.appendFileSync(outputFileName, keyPair.pub + ',' + keyPair.priv + '\n');
+        }
+    }
+}
+
+// jsonsToCsv();
 // fundAll();
 createWallets(2);
 // main();
