@@ -1,0 +1,22 @@
+{
+  "name": "batch-accounts-tools",
+  "version": "1.0.0",
+  "description": "",
+  "main": "batacc_tool.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yakphi/batch-accounts-tools.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yakphi/batch-accounts-tools/issues"
+  },
+  "homepage": "https://github.com/yakphi/batch-accounts-tools#readme",
+  "dependencies": {
+    "ethers": "^5.7.0"
+  }
+}
